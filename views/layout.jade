@@ -1,7 +1,18 @@
 doctype html
 html
   head
-    title= title
+    title Email Verifier
     link(rel='stylesheet', href='/stylesheets/style.css')
+    // Bootstrap
+    link(rel='stylesheet', href='/bootstrap3/css/bootstrap.min.css')
+
+    // jQuery (necessary for Bootstrap's JavaScript plugins)
+    script(src = 'http://code.jquery.com/jquery-latest.js')
+    // Include all compiled plugins (below), or include individual files as needed
+    script(src = '../bootstrap3/js/bootstrap.min.js')
+
+    script(src = '../javascripts/validateEmailClientSide.js')
+
   body
     block content
+

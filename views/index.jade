@@ -1,37 +1,12 @@
-doctype html
+extends layout
 
-html.no-js
-
-    html
-        head
-
-            title Email Verifier
-
-            // Bootstrap
-            link(href='../bootstrap3/css/bootstrap.min.css', rel='stylesheet')
-
-        body
+block content
             form#validate
                 .form-group
                     label(for='exampleInputEmail1') Email address
-
                     input#exampleInputEmail1.form-control(type='email', placeholder='Enter email')
-
                 button.btn.btn-default(type='submit') Submit
-            // jQuery (necessary for Bootstrap's JavaScript plugins)
-            script
-            //  include https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js
-            // Include all compiled plugins (below), or include individual files as needed
-            script
-            //  include ../bootstrap3/js/bootstrap.min.js
-
-            script.
-             alert("Vou entrar no ClientSide");
 
 
-            script(src = "../public/javascripts/validateEmailClientSide.js")
 
-
-            //script
-            //    include ../public/javascripts/validateEmailClientSide.js
 

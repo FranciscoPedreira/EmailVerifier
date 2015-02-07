@@ -1,6 +1,9 @@
-$(document).ready(function(event){
+//remap jquery to $
+//(function ($) {})(window.jQuery);
 
-    $( "#validate" ).submit(function( event ) {
+$(document).ready(function(event) {
+
+    $("#validate").submit(function (event) {
 
         event.preventDefault();
 
@@ -11,17 +14,13 @@ $(document).ready(function(event){
          console.log( "Load was performed." );
          });*/
 
-        $.getScript( "../validateEmailServerSide.js" )
-            .done(function( script, textStatus ) {
-                console.log( textStatus );
-            })
-            .fail(function( jqxhr, settings, exception ) {
-                alert("getScript falhou :( " + exception + " settings: " + settings + " Status: " + jqxhr.status);
-                $( "div.log" ).text( "Triggered ajaxError handler." );
-            });
+        alert("ENTREI NO CLIENTSidE");
+
+        // app.js
+        var verifyEmail = require('../../validateEmailServerSide');
+        verifyEmail();
+
 
     });
 
-
 });
-

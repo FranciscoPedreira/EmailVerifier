@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-//var validateEmail = require('./public/javascripts/validateEmailClientSide');
+var validateEmail = require('./public/javascripts/validateEmailClientSide');
 
 var app = express();
 
@@ -59,3 +59,4 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
+module.exports = validateEmail;
