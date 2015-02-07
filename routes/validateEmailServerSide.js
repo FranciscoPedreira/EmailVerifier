@@ -28,7 +28,7 @@ function validateEmail(req,res) {
             console.log("Success! Here is the response:");
         console.log(response.body);
 
-        res.end('Response from validateEmail: ' + JSON.stringify(response.body));
+        res.end(JSON.stringify(response.body));
 
     });
 
