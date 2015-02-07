@@ -7,19 +7,18 @@ $(document).ready(function(event) {
 
         event.preventDefault();
 
-        /*$.getScript("../validateEmailServerSide.js", function(data, textStatus, jqxhr){
-         console.log( data ); // Data returned
-         console.log( textStatus ); // Success
-         console.log( jqxhr.status ); // 200
-         console.log( "Load was performed." );
-         });*/
+        var email = $('#exampleInputEmail1').val();
 
-        alert("ENTREI NO CLIENTSidE");
-
-        // app.js
-        var verifyEmail = require('../../validateEmailServerSide');
-        verifyEmail();
-
+        $.ajax({
+            url: '/validateEmail',
+            data: 'email=' + email,
+            success: function(data){
+                alert('Result: ' + JSON.stringify(data));
+            },
+            error:function(error){
+                throw error
+            }
+        });
 
     });
 
